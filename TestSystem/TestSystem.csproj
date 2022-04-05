@@ -77,6 +77,12 @@
     <Compile Include="ControlPanelUserForm.Designer.cs">
       <DependentUpon>ControlPanelUserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditDataTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditDataTestForm.Designer.cs">
+      <DependentUpon>EditDataTestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditDataUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlPanelUserForm.resx">
       <DependentUpon>ControlPanelUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDataTestForm.resx">
+      <DependentUpon>EditDataTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditDataUserForm.resx">
       <DependentUpon>EditDataUserForm.cs</DependentUpon>
