@@ -22,6 +22,7 @@ namespace TestSystem
         private void editDataBtn_Click(object sender, EventArgs e)
         {
             //Проверка коммита в новой ветке
+            //Проверка возврата коммита
             using (Model.TestSystemEntities db = new Model.TestSystemEntities())
             {
                 var user = db.Users.Where(x => x.Login == loginFieldLabel.Text).FirstOrDefault();
