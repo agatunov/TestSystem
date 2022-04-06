@@ -19,7 +19,8 @@ namespace TestSystem
 
         private void editDataTestBtn_Click(object sender, EventArgs e)
         {
-          
+            EditDataTestForm editDataTestForm = new EditDataTestForm();
+            editDataTestForm.Show();
         }
     }
 }

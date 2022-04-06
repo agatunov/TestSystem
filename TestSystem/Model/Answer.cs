@@ -14,11 +14,11 @@ namespace TestSystem.Model
     
     public partial class Answer
     {
-        public int AnswerId { get; set; }
+        public int AnswerId { get; set; } 
         public string Content { get; set; }
         public int QuestionId { get; set; }
         public bool Right { get; set; }
     
-        public virtual Question Question { get; set; }
+        public virtual Question Question { get; set; } 
     }
 }
