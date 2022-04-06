@@ -142,6 +142,8 @@ namespace TestSystem
             // 
             // testHistoryDataGrid
             // 
+            this.testHistoryDataGrid.AllowUserToAddRows = false;
+            this.testHistoryDataGrid.AllowUserToDeleteRows = false;
             this.testHistoryDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.testHistoryDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TestName,
@@ -153,6 +155,7 @@ namespace TestSystem
             this.testHistoryDataGrid.Name = "testHistoryDataGrid";
             this.testHistoryDataGrid.Size = new System.Drawing.Size(1045, 324);
             this.testHistoryDataGrid.TabIndex = 13;
+            this.testHistoryDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.testHistoryDataGrid_CellContentClick);
             // 
             // TestName
             // 
@@ -183,6 +186,7 @@ namespace TestSystem
             // 
             // getCertificateBtn
             // 
+            this.getCertificateBtn.Enabled = false;
             this.getCertificateBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.getCertificateBtn.Location = new System.Drawing.Point(479, 699);
             this.getCertificateBtn.Name = "getCertificateBtn";
@@ -220,6 +224,7 @@ namespace TestSystem
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AuthorizationHeaderLabel);
             this.Name = "ControlPanelUserForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Панель управления пользователя";
             ((System.ComponentModel.ISupportInitialize)(this.testHistoryDataGrid)).EndInit();
             this.ResumeLayout(false);

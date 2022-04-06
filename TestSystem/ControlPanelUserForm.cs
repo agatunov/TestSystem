@@ -18,8 +18,29 @@ namespace TestSystem
             loginFieldLabel.Text = user.Login;
             fullnameFieldLabel.Text = user.Surname + " " + user.Name + " " + user.Patronymic;
             EditHelper.userId = user.UserId;
-            RefreshPage();
+            RefreshPage();  
         }
+
+        public struct TestResult
+        {
+            public string testName;
+            public string result;
+            public TimeSpan time;
+            public int points;
+            public DateTime dateEnd;
+
+            public TestResult(string _testName, string _result, TimeSpan _time, int _points, DateTime _dateEnd)
+            {
+                testName = _testName;
+                result = _result;
+                time = _time;
+                points = _points;
+                dateEnd = _dateEnd;
+            }
+
+        }
+        List<TestResult> testResults = new List<TestResult>();
+
         public void RefreshPage() //Перезагрузка страницы
         {
             using (Model.TestSystemEntities db = new Model.TestSystemEntities())
@@ -61,7 +82,40 @@ namespace TestSystem
 
         private void refreshBtn_Click(object sender, EventArgs e)
         {
+            using (Model.TestSystemEntities db = new Model.TestSystemEntities())
+            {
+                testHistoryDataGrid.Rows.Clear();
+                testHistoryDataGrid.Refresh();
+                testResults = new List<TestResult>();
+                var finishTests = db.FinishedTests.Where(x => x.UserId == EditHelper.userId);
+                foreach (var finishTest in finishTests)
+                {
+                    var test = db.Tests.Where(x => x.TestId == finishTest.TestId).FirstOrDefault();
+                    string result = "";
+                    if (finishTest.Points >= 70) result = "Зачёт";
+                    else result = "Незачёт";
+                    TimeSpan time = finishTest.Time;
+                    int points = finishTest.Points;
+                    DateTime dateEnd = finishTest.DateEnd;
+                    testResults.Add(new TestResult(test.Name, result, time, points, dateEnd));
+                }
+                foreach (var testResult in testResults)
+                {
+                    testHistoryDataGrid.Rows.Add(testResult.testName, testResult.result, testResult.time, testResult.points, testResult.dateEnd);
+                }
+            }
+        }
 
+        private void testHistoryDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (testResults[e.RowIndex].points >= 70)
+            {
+                getCertificateBtn.Enabled = true;
+            }
+            else
+            {
+                getCertificateBtn.Enabled =false;
+            }
         }
     }
 }

@@ -372,6 +372,7 @@ namespace TestSystem
             this.Controls.Add(this.label1);
             this.Controls.Add(this.testsComboBox);
             this.Name = "EditDataTestForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditDataTestForm";
             this.ResumeLayout(false);
             this.PerformLayout();
