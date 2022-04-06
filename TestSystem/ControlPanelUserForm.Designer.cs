@@ -127,6 +127,7 @@ namespace TestSystem
             this.passBtn.TabIndex = 11;
             this.passBtn.Text = "Пройти";
             this.passBtn.UseVisualStyleBackColor = true;
+            this.passBtn.Click += new System.EventHandler(this.passBtn_Click);
             // 
             // refreshBtn
             // 
@@ -137,6 +138,7 @@ namespace TestSystem
             this.refreshBtn.TabIndex = 12;
             this.refreshBtn.Text = "Обновить историю";
             this.refreshBtn.UseVisualStyleBackColor = true;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
             // testHistoryDataGrid
             // 
