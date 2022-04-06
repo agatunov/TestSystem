@@ -198,6 +198,7 @@ namespace TestSystem
             this.Controls.Add(this.testNameLabel);
             this.Controls.Add(this.fullNameLabel);
             this.Name = "TestForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Тестирование";
             this.ResumeLayout(false);
             this.PerformLayout();

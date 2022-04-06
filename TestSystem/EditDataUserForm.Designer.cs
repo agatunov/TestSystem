@@ -151,6 +151,7 @@ namespace TestSystem
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "EditDataUserForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Редактирование данных";
             this.ResumeLayout(false);
             this.PerformLayout();

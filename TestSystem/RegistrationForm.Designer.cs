@@ -163,6 +163,7 @@ namespace TestSystem
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AuthorizationHeaderLabel);
             this.Name = "RegistrationForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();

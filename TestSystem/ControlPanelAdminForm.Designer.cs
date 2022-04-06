@@ -62,6 +62,7 @@ namespace TestSystem
             this.Controls.Add(this.editDataTestBtn);
             this.Controls.Add(this.editDataUserBtn);
             this.Name = "ControlPanelAdminForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Панель администратора";
             this.ResumeLayout(false);
 
