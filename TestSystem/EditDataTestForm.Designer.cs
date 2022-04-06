@@ -38,7 +38,7 @@ namespace TestSystem
             this.addNewQuestionButton = new System.Windows.Forms.Button();
             this.deleteQuestionButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.questionField = new System.Windows.Forms.TextBox();
+            this.questionNameField = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -143,6 +143,7 @@ namespace TestSystem
             this.deleteQuestionButton.TabIndex = 8;
             this.deleteQuestionButton.Text = "Удалить вопрос";
             this.deleteQuestionButton.UseVisualStyleBackColor = false;
+            this.deleteQuestionButton.Click += new System.EventHandler(this.deleteQuestionButton_Click);
             // 
             // label2
             // 
@@ -154,13 +155,13 @@ namespace TestSystem
             this.label2.TabIndex = 9;
             this.label2.Text = "Вопрос:";
             // 
-            // questionField
+            // questionNameField
             // 
-            this.questionField.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.questionField.Location = new System.Drawing.Point(618, 284);
-            this.questionField.Name = "questionField";
-            this.questionField.Size = new System.Drawing.Size(615, 29);
-            this.questionField.TabIndex = 10;
+            this.questionNameField.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.questionNameField.Location = new System.Drawing.Point(618, 284);
+            this.questionNameField.Name = "questionNameField";
+            this.questionNameField.Size = new System.Drawing.Size(615, 29);
+            this.questionNameField.TabIndex = 10;
             // 
             // label5
             // 
@@ -244,6 +245,7 @@ namespace TestSystem
             this.asnwer1RightButton.TabStop = true;
             this.asnwer1RightButton.Text = "1";
             this.asnwer1RightButton.UseVisualStyleBackColor = true;
+            this.asnwer1RightButton.CheckedChanged += new System.EventHandler(this.asnwer1RightButton_CheckedChanged);
             // 
             // label9
             // 
@@ -265,6 +267,7 @@ namespace TestSystem
             this.asnwer2RightButton.TabStop = true;
             this.asnwer2RightButton.Text = "2";
             this.asnwer2RightButton.UseVisualStyleBackColor = true;
+            this.asnwer2RightButton.CheckedChanged += new System.EventHandler(this.asnwer2RightButton_CheckedChanged);
             // 
             // asnwer3RightButton
             // 
@@ -276,6 +279,7 @@ namespace TestSystem
             this.asnwer3RightButton.TabStop = true;
             this.asnwer3RightButton.Text = "3";
             this.asnwer3RightButton.UseVisualStyleBackColor = true;
+            this.asnwer3RightButton.CheckedChanged += new System.EventHandler(this.asnwer3RightButton_CheckedChanged);
             // 
             // asnwer4RightButton
             // 
@@ -287,6 +291,7 @@ namespace TestSystem
             this.asnwer4RightButton.TabStop = true;
             this.asnwer4RightButton.Text = "4";
             this.asnwer4RightButton.UseVisualStyleBackColor = true;
+            this.asnwer4RightButton.CheckedChanged += new System.EventHandler(this.asnwer4RightButton_CheckedChanged);
             // 
             // saveQuestionButton
             // 
@@ -298,6 +303,7 @@ namespace TestSystem
             this.saveQuestionButton.TabIndex = 24;
             this.saveQuestionButton.Text = "Сохранить";
             this.saveQuestionButton.UseVisualStyleBackColor = false;
+            this.saveQuestionButton.Click += new System.EventHandler(this.saveQuestionButton_Click);
             // 
             // deleteTestButton
             // 
@@ -355,7 +361,7 @@ namespace TestSystem
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.questionField);
+            this.Controls.Add(this.questionNameField);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.deleteQuestionButton);
             this.Controls.Add(this.addNewQuestionButton);
@@ -383,7 +389,7 @@ namespace TestSystem
         private System.Windows.Forms.Button addNewQuestionButton;
         private System.Windows.Forms.Button deleteQuestionButton;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox questionField;
+        private System.Windows.Forms.TextBox questionNameField;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
